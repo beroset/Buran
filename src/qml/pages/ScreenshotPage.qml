@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.15
-import QtQuick.Dialogs
+import QtQuick.Dialogs 1.3 
 
 Pane {
     id: scrShot
@@ -9,7 +9,7 @@ Pane {
     MessageDialog {
         id: notification
         visible: false
-        buttons: MessageDialog.Ok
+        standardButtons: StandardButton.Ok
     }
 
     Label {

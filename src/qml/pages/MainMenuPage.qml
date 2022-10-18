@@ -25,7 +25,7 @@
 
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.0
 import QtQuick.Controls 2.15
 import Qt.labs.settings 1.0
 import "../components/"

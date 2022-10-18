@@ -23,6 +23,7 @@
 #include <QQmlContext>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlFileSelector>
 
 int main(int argc, char *argv[])
 {
@@ -32,6 +33,8 @@ int main(int argc, char *argv[])
     app.setOrganizationName("AsteroidOS");
     app.setApplicationVersion(VERSION);
     QQmlApplicationEngine engine;
+    QQmlFileSelector* selector = new QQmlFileSelector(&engine);
+    selector = selector;
     engine.rootContext()->setContextProperty("localHostName", QHostInfo::localHostName());
     engine.rootContext()->setContextProperty("homePath", QDir::homePath());
 #ifdef DEBUG_BUILD

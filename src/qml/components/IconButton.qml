@@ -34,7 +34,7 @@
 
 import QtQuick 2.9
 import QtQuick.Controls 2.15
-import Qt5Compat.GraphicalEffects
+import QtGraphicalEffects 1.12
 
 MouseArea {
         id: buttonRoot

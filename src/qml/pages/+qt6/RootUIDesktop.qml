@@ -56,7 +56,7 @@ Page {
             Label { //text whether watch is connected
                 id: syncLabel
                 height: parent.height
-                text: curWatchConnected && watch ? watch.name : "disconnected"
+                text: curWatchConnected ? watch.name : "disconnected"
                 verticalAlignment: Text.AlignVCenter
             }
 
@@ -65,12 +65,12 @@ Page {
                 height: parent.height
                 width: parent.height
                 source: "../../img/ios-battery-full.svg" //maybe change this so the icon changes with battery
-                visible: watch && watch.timeServiceReady
+                visible: curWatchConnected
                 Label {
                     anchors.centerIn: parent
                     id: batteryLabel
                     height: parent.height
-                    text: curWatchConnected && watch ? watch.batteryLevel + ("%") : null
+                    text: curWatchConnected ? watch.batteryLevel + ("%") : null
                     verticalAlignment: Text.AlignVCenter
                     color: "white"
                     font.pixelSize: 9
@@ -91,33 +91,6 @@ Page {
                 anchors.fill: parent
             }
 
-            //Popup { //the quick settings menu itself
-                //id: settingsPopup
-                //y: parent.height
-                //x: parent.width - width
-                //padding: 0
-                //Column {
-                    //Button {
-                        //text: "Watch Selection"
-                        //onClicked: pageStack.push(Qt.resolvedUrl("WatchSelectionPage.qml"))
-                    //}
-
-                    //Button {
-
-                        //text: "App settings"
-                        //onClicked: pageStack.push(Qt.resolvedUrl("AppSettings.qml"))
-                    //}
-
-                    //Button {
-                        //text: "Service status"
-                    //}
-
-                    //Button {
-                        //text: "About"
-                        //onClicked: pageStack.push(Qt.resolvedUrl("InfoPage.qml"))
-                    //}
-                //}
-            //}
             BuranPopupMenu {
                 id: settingsPopup
             }
@@ -130,7 +103,6 @@ Page {
     }
 
     contentItem: SplitView {
-        //anchors.fill: parent
         height: parent.height
 
         MainMenuPage{
@@ -139,7 +111,6 @@ Page {
             implicitWidth: settings.menuPanelWidth
             width: parent.width/6
             palette.window: settings.value("uiAccentColor","#f19a11")
-            //Layout.minimumWidth: 40
         }
         StackView {
             id: pageStack
@@ -166,7 +137,4 @@ Page {
             pageStack.push(Qt.resolvedUrl("../LoadingPage.qml"));
         }
     }
-
-    //Component.onCompleted: watch.setScreenshotFileInfo("/home/phablet/.local/share/telescope.asteroidos/screenshot/'screenshot'ddMMyyyy_hhmmss'.jpg'"); //TODO: change this to a path that's exists for the user and add a setting for this in UISettings.qml
 }
-

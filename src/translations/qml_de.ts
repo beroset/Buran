@@ -4,6 +4,7 @@
 <context>
     <name>AppSettings</name>
     <message>
+        <location filename="../qml/pages/+qt6/AppSettings.qml" line="35"/>
         <location filename="../qml/pages/AppSettings.qml" line="36"/>
         <source>pick UI accent colour</source>
         <translation type="unfinished"></translation>
@@ -46,36 +47,43 @@
         <translation type="obsolete">Benachrichtigungseinstellungen</translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="70"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="69"/>
         <source>Enable time synchronisation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="79"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="78"/>
         <source>Telescope</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="79"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="78"/>
         <source>Watch-Finder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="79"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="78"/>
         <source> is looking for you!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="82"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="81"/>
         <source>Find my watch!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="94"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="93"/>
         <source>Take a screenshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/+qt6/MainMenuPage.qml" line="104"/>
         <location filename="../qml/pages/MainMenuPage.qml" line="103"/>
         <source>Weather settings</source>
         <translation type="unfinished"></translation>

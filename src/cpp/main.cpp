@@ -24,6 +24,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlFileSelector>
+#include <QFileSelector>
 
 int main(int argc, char *argv[])
 {
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
     app.setApplicationVersion(VERSION);
     QQmlApplicationEngine engine;
     QQmlFileSelector* selector = new QQmlFileSelector(&engine);
-    selector = selector;
+    selector->setExtraSelectors({"qt6"});
     engine.rootContext()->setContextProperty("localHostName", QHostInfo::localHostName());
     engine.rootContext()->setContextProperty("homePath", QDir::homePath());
 #ifdef DEBUG_BUILD

@@ -11,7 +11,7 @@ Button { //button opens the quick settings menu
     width: height
     anchors.right: parent.right
     Image {
-        source: Qt.resolvedUrl("/qml/img/md-settings.svg")
+        source: Qt.resolvedUrl("../../img/md-settings.svg")
         anchors.fill: parent
     }
     onClicked: settingsPopup.open()
